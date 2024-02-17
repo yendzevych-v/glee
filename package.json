@@ -1,0 +1,32 @@
+{
+  "name": "start_gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp -v",
+    "styles": "gulp styles",
+    "watching": "gulp watching",
+    "scripts": "gulp scripts",
+    "browsersync": "gulp browsersync",
+    "images": "gulp images",
+    "build": "gulp build",
+    "parallel": "gulp",
+    "cleanDist": "gulp cleanDist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.7.1",
+    "sass": "^1.70.0"
+  }
+}
