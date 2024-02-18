@@ -1,8 +1,121 @@
-@import 'vars';
 @import 'fonts';
+@import 'vars';
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 50px 0;
+  &__wrapper {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  line-height: 36px;
+  @extend %rubik-500;
+  color: $accent-color;
+  &__img {
+    margin-right: 15px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item + .menu__list-item {
+    margin-left: 35px
+  }
+  &__list-link {
+    font-size: 15px;
+    line-height: 15px;
+    @extend %rubik-500;
+    color: $accent-color;
+    transition: all .3s;
+    padding-bottom: 5px;
+    &:hover {
+      border-bottom: 2px solid $link-color;
+    }
+  }
+
+  &__list-link--active {
+    border-bottom: 2px solid $link-color;
+  }
+}
+
+.header-action {
+  display: flex;
+  &__search,
+  &__link {
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__search {
+    background-color: rgba($button-color, .2);
+    margin-right: 20px;
+  }
+  &__link {
+    background-color: $button-color;
+    margin-left: 20px;
+  }
+
+  &__wishlist {
+    padding: 10px 30px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+      height: 32px;
+      background-color: $ligth-color;
+      opacity: .4;
+    }
+  }
+  &__cart {
+    padding: 10px 30px;
+    position: relative;
+  }
+  
+  &__num {
+    position: absolute;
+    top: 0;
+    right: 22px;
+    background-color: $ligth-color;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color: $default-color;
+    text-align: center;
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  &__shop-group {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 26px;
+    background-color: $bg-color;
+  }
+
+}
 
 
 
