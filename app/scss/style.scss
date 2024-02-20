@@ -1,6 +1,7 @@
 @import 'fonts';
 @import 'vars';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -14,7 +15,6 @@
     align-items: center;
   }
 }
-
 .logo {
   display: flex;
   align-items: center;
@@ -26,7 +26,6 @@
     margin-right: 15px;
   }
 }
-
 .menu {
   &__list {
     display: flex;
@@ -45,12 +44,10 @@
       border-bottom: 2px solid $link-color;
     }
   }
-
   &__list-link--active {
     border-bottom: 2px solid $link-color;
   }
 }
-
 .header-action {
   display: flex;
   &__search,
@@ -63,7 +60,6 @@
     justify-content: center;
     align-items: center;
   }
-
   &__search {
     background-color: rgba($button-color, .2);
     margin-right: 20px;
@@ -72,7 +68,6 @@
     background-color: $button-color;
     margin-left: 20px;
   }
-
   &__wishlist {
     padding: 10px 30px;
     position: relative;
@@ -90,8 +85,7 @@
   &__cart {
     padding: 10px 30px;
     position: relative;
-  }
-  
+  } 
   &__num {
     position: absolute;
     top: 0;
@@ -105,7 +99,6 @@
     font-size: 10px;
     line-height: 16px;
   }
-
   &__shop-group {
     display: flex;
     position: relative;
@@ -114,9 +107,249 @@
     border-radius: 26px;
     background-color: $bg-color;
   }
-
 }
 
+.hero {
+  max-width: 1800px;
+  margin: 0 auto;
+  &__wrapper {
+    position: relative;
+    margin: 0 15px;
+    background-color: $bg-color;
+    padding: 100px 0 40px;
+    &::before{
+      content: '';
+      width: 634px;
+      height: 634px;
+      border-radius: 50%;
+      background: linear-gradient(to left, white, transparent);
+      position: absolute;
+      top: 8%;
+      right: 7%;
+    }
+  }
+  &__slider-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__slider-content {
+    padding: 120px 0 190px;
+  }
+  &__slider-title {
+    font-size: 72px;
+    line-height: 70px;
+    color: $default-color;
+    @extend %rubik-500;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    max-width: 470px;
+  }
+  &__slider-text {
+    max-width: 370px;
+    font-size: 18px;
+    line-height: 30px;
+    color: $accent-color;
+    @extend %rubik-400;
+    margin-bottom: 35px;
+  }
+  &__slider-btn {
+    background-color: $button-color;
+    padding: 15px 15px 15px 30px;
+    font-size: 15px;
+    color: $ligth-color;
+    @extend %rubik-500;
+    max-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s;
+    &:hover {
+      background-color: $default-color;
+    }
+    path {
+      fill: $ligth-color;
+    }
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li,
+    .slick-active {
+      text-align: center;
+    }
+    li + li {
+      margin-left: 20px;
+    }
+    .slick-active {
+      button {
+        background-color: $ligth-color;
+      }
+    }
+    button {
+      width: 29px;
+      height: 29px;
+      border-radius: 50%;
+      font-size: 11px;
+      line-height: 9px;
+      color: $default-color;
+      border: none;
+      background-color: rgba($ligth-color, .3);
+      @extend %rubik-500;
+    }
+  }
+}
 
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  padding: 80px 0 70px;
+  border-bottom: 1px solid rgba($button-color, .4);
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__contact {
+    width: 200px;
+    margin-right: 70px;
+  }
+
+  &__services,
+  &__account,
+  &__newsletter {
+    width: 270px;
+    display: block;
+  }
+  &__items + .footer-top__items {
+    margin-left: 30px;
+  }
+
+  &__address,
+  &__email,
+  &__phone {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    @extend %rubik-400;
+    color: $text-color;
+    margin-bottom: 20px;
+    a {
+      color: $text-color;
+      transition: all .3s;
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+
+  &__items-title {
+    font-size: 16px;
+    @extend %dmsans-700;
+    line-height: 21px;
+    color: $footer-title;
+    margin-bottom: 25px;
+    margin-top: 20px;
+  }
+  &__link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    @extend %rubik-400;
+    color: $text-color;
+    margin-bottom: 20px;
+    transition: all .3s;
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+  &__items-text {
+    font-size: 14px;
+    line-height: 24px;
+    @extend %rubik-400;
+    color: $text-color;
+    margin-bottom: 35px;
+  }
+
+  &__form {
+    width: 100%;
+    position: relative;
+  }
+
+  &__form-input {
+    background-color: rgba($bg-color, .2);
+    font-size: 12px;
+    line-height: 18px;
+    height: 38px;
+    border: none;
+    padding: 10px 100px 10px 15px;
+    max-width: 270px;
+    width: 100%;
+    @extend %dmsans-400;
+    outline: none;
+    &::placeholder {
+      color: $placeholder-color;
+    }
+  }
+
+  &__form-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #a3bbc8;
+    color: $ligth-color;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    @extend %dmsans-400;
+    transition: all .3s;
+    &:hover {
+      background-color: $default-color;
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+
+  &__copy,
+  &__nav-link {
+    font-size: 14px;
+    line-height: 32px;
+    @extend %rubik-400;
+    color: $text-color;
+  }
+
+  
+  &__nav-list {
+    display: flex
+  }
+
+  &__nav-item + .footer-bottom__nav-item {
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 15px;
+      background-color: $text-color;
+      left: 15px;
+      top: 8px;
+    }
+  }
+  
+  &__nav-link {
+    transition: all .3s;
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
 
 @import 'media';
