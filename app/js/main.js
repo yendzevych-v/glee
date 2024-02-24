@@ -12,5 +12,5 @@ $(function () {
 
   });
 
-  var mixer = mixitup('.design__list');
+  var mixer = mixitup('.design__list, .product__items');
 });
