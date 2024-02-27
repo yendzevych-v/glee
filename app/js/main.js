@@ -12,5 +12,14 @@ $(function () {
 
   });
 
-  var mixer = mixitup('.design__list, .product__items');
+  var mixer = mixitup('section.product', {
+    controls: {
+        scope: 'local'
+    }
+});
+  var mixer1 = mixitup('section.design', {
+    controls: {
+        scope: 'local'
+    }
+});
 });
