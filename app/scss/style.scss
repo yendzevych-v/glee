@@ -690,7 +690,29 @@
   }
 }
 
-
+.terms {
+  padding-top: 115px;
+  &__subtitle {
+    font-size: 24px;
+    line-height: 40px;
+    @extend %rubik-500;
+    margin-bottom: 20px;
+  }
+  &__list{
+    margin-left: 27px;
+    list-style-type: decimal-leading-zero;
+  }
+  &__item {
+    margin-bottom: 20px;
+  }
+  &__list,
+  &__text {
+    margin-bottom: 65px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 
 
 
