@@ -122,7 +122,6 @@
   }
 }
 
-
 .hero {
   max-width: 1800px;
   margin: 0 auto;
@@ -258,7 +257,7 @@
   margin-bottom: 20px;
 }
 
-.filter {
+.tabs-filter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,7 +275,7 @@
     }
   }
 
-    &__btn + .filter__btn {
+    &__btn + .tabs-filter__btn {
       margin-left: 30px;
     }
 }
@@ -290,7 +289,6 @@
   &__items {
     margin-top: 70px;
     display: flex;
-    // justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -303,12 +301,80 @@
   text-align: center;
   max-width: 270px;
   width: 100%;
+  &.product-item--list{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    .product-item__img-box {
+      height: 420px;
+      width: 370px;
+      margin-right: 50px;
+      flex: 1 0 auto;
+      padding: 0;
+      img {
+        height: 370px;
+      }
+    }
+    .product-item__link-box {
+      display: none;
+    }
+    .product-item__box {
+      margin-bottom: 30px;
+    }
+    .product-item__content-box {
+      display: block;
+    }
+    .product-item__title {
+      font-size: 40px;
+      line-height: 40px;
+      @extend %rubik-400;
+      color: #333333;
+    }
+    
+    .product-item__price {
+      font-size: 30px;
+      line-height: 45px;
+      @extend %rubik-400;
+      color: #333333;
+    }
+    .product-item__star {
+      display: block;
+      margin: 20px -5px 30px;
+    }
+    .product-item_text {
+      margin-bottom: 30px;
+    }
+    .product-item__btn {
+      padding: 16px 50px 16px;
+      background-color: $button-color;
+      font-size: 15px;
+      letter-spacing: 1px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: $ligth-color;
+      @extend %rubik-400;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+      transition: all .3s;
+      &:hover {
+        background-color: $default-color;
+      }
+    }
+  }
   &:hover {
     .product-item__link-box {
       transition: all .3s;
       opacity: 1;
       visibility: visible;
     }
+  }
+  &__content-box {
+    display: none;
+  }
+  &__star {
+    display: none;
   }
   &__img-box {
     position: relative;
@@ -1063,5 +1129,231 @@
     }
   }
 }
+.shop {
+  padding: 100px 0;
+  &__inner {
+    display: flex;
+  }
+  &__filters {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 30px;
+    flex: 1 0 auto;
+  }
+}
+
+.filter {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    position: relative;
+    font-size: 18px;
+    line-height: 32px;
+    @extend %dmsans-700;
+    text-transform: uppercase;
+    color: $default-color;
+    padding-right: 40px;
+    margin-bottom: 30px;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 38px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $button-color;
+      top: 49%;
+      margin-left: 15px;
+    }
+  }
+}
+.filter-category,
+.filter-brand {
+  &__label {
+    cursor: pointer;
+  }
+  
+  &__input {
+    @extend %checkbox-hidden;
+    &:checked + .filter-category__checkbox {
+      background-color: rgba($button-color, .2);
+      border-radius: 5px;
+    }
+    &:checked + .filter-brand__checkbox {
+      background-color: rgba($button-color, .2);
+      border-radius: 5px;
+      .filter-brand__checkbox-num {
+          color: $default-color;
+        }
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 13px 20px 13px 15px;
+    color: $default-color;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.filter-brand {
+  &__checkbox-num {
+    color: #b3b3b3;
+  }
+}
+
+.filter-price {
+  &__label {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.irs--flat {
+  height: 15px;
+  margin-bottom: 20px;
+}
+
+.irs-min,
+.irs-max {
+  display: none;
+}
+
+.irs-from,
+.irs-to,
+.irs-single {
+  display: none;
+}
+
+.irs--flat .irs-line {
+  top: 6px;
+  height: 2px;
+  background-color: rgba($button-color, .6);
+  border-radius: 1px;
+}
+.irs--flat .irs-bar {
+  top: 6px;
+  height: 3px;
+  background-color: $button-color;
+}
+.irs--flat .irs-handle {
+  top: 0px;
+  width: 15px;
+  height: 15px;
+  background-color: $button-color;
+}
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.filter-products {
+  &__box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #333333;
+    transition: all .3s;
+    &:hover {
+      background-color: rgba($button-color, .2);
+      border-radius: 5px;
+    }
+  }
+  &__image {
+    margin-right: 25px;
+  }
+  &__name {
+    color: inherit;
+    h6 {
+      font-size: 14px;
+      line-height: 16px;
+      @extend %rubik-400;
+    }
+  }
+  &__num {
+    font-size: 15px;
+    line-height: 27px;
+    color: inherit;
+    @extend %rubik-400;
+  }
+}
+
+.star {
+  margin: 10px -5px;
+}
+
+.shop-content {
+  width: 100%;
+  &__filter {
+    background-color: rgba($button-color, .2);
+    padding: 20px 25px 20px 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__filter-buttons {
+    display: flex;
+    align-items: center;
+  }
+  &__filter-btn {
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: 15px;
+    line-height: 0;
+    cursor: pointer;
+    &.shop-content__filter-btn--active {
+      path {
+        fill: $link-color;
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .product-item {
+      margin-bottom: 30px;
+    }
+  }
+}
+.jq-selectbox__select {
+  height: 32px;
+  margin-left: 30px;
+  padding: 0 30px 0 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  @extend %rubik-400;
+  font-size: 16px;
+  line-height: 32px;
+  color: $default-color;
+  text-shadow: none;
+  &:hover {
+    background: transparent;
+  }
+}
+.jq-selectbox__trigger {
+  border-left: none;
+  width: 30px;
+}
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 10px;
+  height: 5px;
+  border: none;
+  background-image: url('../images/icons/angle-down.svg');
+  background-repeat: no-repeat;
+}
+
+
 
 @import 'media';

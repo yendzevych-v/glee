@@ -59,3 +59,32 @@ body {
     color: inherit;
   }
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  &__list {
+    display: flex;
+  }
+  &__arrows,
+  &__item {
+    margin-right: 15px;
+  }
+  &__arrows,
+  &__link {
+    line-height: 1;
+    padding: 18px 20px;
+    color: $default-color;
+    background-color: $ligth-color;
+    border: 1px solid $button-color;
+    display: flex;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover{
+      color: $ligth-color;
+      background-color: $button-color;
+    }
+  }
+}
