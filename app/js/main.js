@@ -12,7 +12,7 @@ $(function () {
     $('.product-item').removeClass('product-item--list');
   });
 
-  $('.select-style').styler();
+  $('.select-style, .product-details__num').styler();
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",
@@ -39,6 +39,22 @@ $(function () {
     spacing: '10px',
     normalFill: '#d6d6d6',
     ratedFill: '#ffcc00'
+  });
+
+  $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    focusOnSelect: true,
+    arrows: false,
+    draggable: false,
+  });
+
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    arrows: false,
+    draggable: false,
   });
 
   $('.hero__slider').slick({
