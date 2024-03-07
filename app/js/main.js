@@ -73,6 +73,14 @@ $(function () {
     autoplay: true
   });
 
+  $('.related__slide').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    draggable: false,
+    prevArrow: ('<button type="button" class="slick-prev"><img src="images/icons/arrow-left.png" alt="arrow left"></button>'),
+    nextArrow: ('<button type="button" class="slick-next"><img src="images/icons/arrow-right.png" alt="arrow right"></button>')
+  });
+
   Fancybox.bind('[data-fancybox]', {
 
   });

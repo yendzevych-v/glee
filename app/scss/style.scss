@@ -1720,10 +1720,41 @@
       background-color: $accent-color;
     }
   }
-  
 }
 
+.related {
+  &__title {
+    @extend %title;
+    color: $default-color;
+    margin-bottom: 60px;
+  }
+}
+  
+.slick-arrow {
+  position: absolute;
+  top: -83px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: $ligth-color;
+  border-radius: 5px;
+  border: 1px solid rgba($button-color, .2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+  &:hover {
+    border-color: $button-color;
+  }
+}
+.slick-prev {
+  right: 70px;
+}
 
+.slick-list {
+  margin: -32px 0;
+  padding: 32px 0;
+}
 
 
 
