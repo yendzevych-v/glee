@@ -1756,6 +1756,192 @@
   padding: 32px 0;
 }
 
+.blog-page {
+  padding: 120px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    width: 830px;
+    margin-right: 70px;
+  }
+  &__item {
+    margin-bottom: 50px;
+  }
+  &__aside {
+    width: 270px;
+  }
+  &__item-box {
+    margin-bottom: 35px;
+    position: relative;
+  }
+  &__link {
+    display: block;
+  }
+  &__item-metadate {
+    width: 275px;
+    background-color: $button-color;
+    padding: 25px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__item-title {
+    font-size: 36px;
+    line-height: 36px;
+    color: #333333;
+    @extend %rubik-400;
+    margin-bottom: 30px;
+  }
+  &__item-text {
+    margin-bottom: 30px;
+  }
+  &__item-link {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 12px;
+    color: $button-color;
+    border: 1px solid $button-color;
+    transition: all .3s;
+    path {
+      fill: $button-color;
+    }
+    &:hover {
+      color: $ligth-color;
+      background-color: $default-color;
+      border-color: $default-color;
+      path {
+        fill: $ligth-color;
+      }
+    }
+  }
+  .pagination {
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+}
+
+.blog-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: $ligth-color;
+  text-transform: uppercase;
+  &__author,
+  &__date {
+    padding-left: 24px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 16px;
+      left: 0;
+      top: 4px;
+    }
+  }
+  &__date::before {
+    background-image: url('../images/icons/calendar-solid.svg');
+  }
+  &__author::before {
+    background-image: url('../images/icons/user-regular.svg');
+  }
+  &__author {
+    color: $ligth-color;
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
+
+.form-search {
+  position: relative;
+  margin-bottom: 60px;
+  &__input {
+    width: 100%;
+    height: 42px;
+    border-radius: 5px;
+    position: relative;
+    background-color: $ligth-color;
+    border: 1px solid rgba($button-color, .4);
+    padding: 0 60px 0 10px;
+    font-size: 14px;
+  }
+  &__btn {
+    background-color: rgba($button-color, .4);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 42px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    &:hover {
+      background-color: $default-color;
+      path {
+        fill: $ligth-color;
+      }
+    }
+    path {
+      fill: #094074;
+    }
+  }
+}
+
+.recent-posts {
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    & + .recent-posts__box {
+      margin-top: 20px;
+    }
+  }
+  &__image {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+  }
+  &__content {
+    display: block;
+  }
+  &__content-title {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    @extend %rubik-400;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__content-date {
+    font-size: 12px;
+    line-height: 16px;
+    color: #9a9a9a;
+    padding-left: 20px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 13px;
+      top: 1px;
+      left: 0;
+      background-image: url('../images/icons/calendar.svg');
+    }
+  }
+}
 
 
 @import 'media';
