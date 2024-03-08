@@ -1,5 +1,14 @@
 $(function () {
 
+  $('.product-tabs__top-item').on('click', function(e) {
+    e.preventDefault();
+    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+    $(this).addClass('product-tabs__top-item--active');
+
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  });
+
   $('.shop-content__filter-btn').on('click', function() {
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
     $(this).addClass('shop-content__filter-btn--active');
@@ -33,7 +42,7 @@ $(function () {
     normalFill: '#d6d6d6',
     ratedFill: '#ffcc00'
   });
-  $(".product-item__star").rateYo({
+  $(".product-item__star, .comments__content-star").rateYo({
     readOnly: true,
     starWidth: '17px',
     spacing: '10px',
@@ -62,6 +71,14 @@ $(function () {
     arrows: false,
     fade: true,
     autoplay: true
+  });
+
+  $('.related__slide').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    draggable: false,
+    prevArrow: ('<button type="button" class="slick-prev"><img src="images/icons/arrow-left.png" alt="arrow left"></button>'),
+    nextArrow: ('<button type="button" class="slick-next"><img src="images/icons/arrow-right.png" alt="arrow right"></button>')
   });
 
   Fancybox.bind('[data-fancybox]', {

@@ -41,7 +41,8 @@ $navigation-color: #222933;
   color: $title-color;
 }
 
-%checkbox-hidden {
+%checkbox-hidden,
+%radio-hidden {
   width: 1px;
   height: 1px;
   overflow: hidden;
