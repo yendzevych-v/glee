@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glee.</title>
+  <link rel="stylesheet" href="css/contact.min.css">
+</head>
+<body>
+  {% include 'app/module/_header/_header.html' %}
+
+  <main class="main">
+
+    {% include 'app/module/_top/_top.html' %}
+
+    <section class="contact-page">
+      <div class="container">
+
+        <h6 class="contact-page__subtitle">Write Here</h6>
+        <h2 class="contact-page__title">Get In Touch</h2>
+        <div class="contact-page__info">
+          <div class="contact-page__column">
+            <div class="contact-page__box-img">
+              <img class="contact-page__info-img" src="images/icons/contact-icon1.png" alt="">
+            </div>
+            <h4 class="contact-page__info-title">Address</h4>
+            <p class="contact-page__info-text">
+              2416 Mapleview Drive <br>
+              Tampa, FL 33634
+            </p>
+          </div>
+          <div class="contact-page__column contact-page__column--border">
+            <div class="contact-page__box-img contact-page__box-img--dark">
+              <img class="contact-page__info-img" src="images/icons/contact-icon2.png" alt="">
+            </div>
+            <h4 class="contact-page__info-title">Our Email</h4>
+            <p class="contact-page__info-text">
+              Main Email : <a class="contact-page__info-link" href="mailto:contact@website.com">contact@website.com</a>
+            </p>
+            <p class="contact-page__info-text">
+              Inquiries : <a class="contact-page__info-link" href="mailto:Info@mail.com">Info@mail.com</a>
+            </p>
+          </div>
+          <div class="contact-page__column">
+            <div class="contact-page__box-img">
+              <img class="contact-page__info-img" src="images/icons/contact-icon3.png" alt="">
+            </div>
+            <h4 class="contact-page__info-title">Our Phone</h4>
+            <p class="contact-page__info-text">
+              Office Telephone : <a class="contact-page__info-link" href="tel:0029129102320">0029129102320</a>
+            </p>
+            <p class="contact-page__info-text">
+              Mobile : <a class="contact-page__info-link" href="tel:000232439493">000 2324 39493</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-page__inner">
+          <form class="contact-page__form" action="#">
+            <div class="contact-page__box-input">
+              <input class="contact-page__text-input" type="text" placeholder="Name">
+              <input class="contact-page__text-input" type="email" placeholder="Email">
+            </div>
+            <textarea class="contact-page__textarea" placeholder="Message"></textarea>
+            <button class="contact-page__btn" type="submit">Send Message</button>
+          </form>
+          <div id="map"></div>
+        </div>
+      </div>
+    </section>
+
+    {% include 'app/module/_news/_news.html' %}
+    {% include 'app/module/_partner/_partner.html' %}
+  </main>
+
+  {% include 'app/module/_footer/_footer.html' %}
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly" defer></script>
+  <script>
+    let map;
+
+      async function initMap() {
+        const { Map } = await google.maps.importLibrary("maps");
+
+        map = new Map(document.getElementById("map"), {
+          center: { lat: 29.74763838083176, lng: -95.36564341546863 },
+          zoom: 8,
+        });
+      }
+
+      initMap();
+  </script>
+  <script src="js/main.min.js"></script>
+  
+</body>
+</html>

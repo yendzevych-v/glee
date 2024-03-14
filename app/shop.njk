@@ -7,72 +7,11 @@
   <link rel="stylesheet" href="css/shop.min.css">
 </head>
 <body>
-  <header class="header">
-  <div class="header__wrapper">
-    <a class="logo" href="#">
-      <img class="logo__img" src="images/logo.png" alt="logo images">
-      Glee.
-    </a>
-    <nav class="menu">
-      <ul class="menu__list">
-        <li class="menu__list-item">
-          <a class="menu__list-link menu__list-link--active" href="#">Home</a>
-        </li>
-        <li class="menu__list-item">
-          <a class="menu__list-link" href="#">About</a>
-        </li>
-        <li class="menu__list-item">
-          <a class="menu__list-link" href="#">Servises</a>
-        </li>
-        <li class="menu__list-item">
-          <a class="menu__list-link" href="#">Catalog</a>
-        </li>
-        <li class="menu__list-item">
-          <a class="menu__list-link" href="#">News</a>
-        </li>
-        <li class="menu__list-item">
-          <a class="menu__list-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="header-action">
-      <a class="header-action__search" href="#">
-        <img class="header-action__img" src="images/search.png" alt="search">
-      </a>
-      <div class="header-action__shop-group">
-        <a class="header-action__wishlist" href="#">
-          <img class="header-action__wishlist-img" src="images/heart.png" alt="heart">
-          <span class="header-action__num">0</span>
-        </a>
-        <a class="header-action__cart" href="#">
-          <img class="header-action__cart-img" src="images/cart.png" alt="cart">
-          <span class="header-action__num">0</span>
-        </a>
-      </div>
-      <a class="header-action__link" href="#">
-        <img class="header-action__img" src="images/dots.png" alt="dots">
-      </a>
-    </div>
-  </div>
-</header>
+  {% include 'app/module/_header/_header.html' %}
 
   <main class="main">
 
-    <section class="page-navigation">
-  <div class="container">
-    <h2 class="page-navigation__title">Log in</h2>
-    <div class="breadcrumbs">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Home</a>
-        </li>
-        <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" href="#">Log in</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+    {% include 'app/module/_top/_top.html' %}
 
     <section class="shop">
       <div class="container">
@@ -713,105 +652,11 @@
       </div>
     </section>
 
-    <div class="partner">
-  <div class="container">
-    <div class="partner__items">
-      <img class="partner__item" src="images/partner/logo_partner-1.png" alt="partner logo">
-      <img class="partner__item" src="images/partner/logo_partner-2.png" alt="partner logo">
-      <img class="partner__item" src="images/partner/logo_partner-3.png" alt="partner logo">
-      <img class="partner__item" src="images/partner/logo_partner-4.png" alt="partner logo">
-      <img class="partner__item" src="images/partner/logo_partner-5.png" alt="partner logo">
-    </div>
-  </div>
-</div>
+    {% include 'app/module/_partner/_partner.html' %}
     
   </main>
 
-  <footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-top__items footer-top__contact">
-        <a class="logo footer-top__logo" href="#">
-          <img class="logo__img" src="images/logo.png" alt="logo images">
-          Glee.
-        </a>
-        <p class="footer-top__address">ADDRESS: <a href="#">4772 Wines Lane
-            Houston, TX 77032</a></p>
-        <p class="footer-top__phone">Telephone:
-          <a href="tel:+8323475843">+832-347-5843</a>
-        </p>
-        <p class="footer-top__email">Email:
-          <a href="mailto:contact@Glee.com">contact@Glee.com</a>
-        </p>
-      </div>
-      <div class="footer-top__items footer-top__services">
-        <h5 class="footer-top__items-title">Services</h5>
-        <ul class="footer-top__list">
-          <li class="footer-top__item">
-            <a class="footer-top__link" href="#">About us</a>
-          </li>
-          <li class="footer-top__item">
-            <a class="footer-top__link" href="#">Return Policy</a>
-          </li>
-          <li class="footer-top__item">
-            <a class="footer-top__link" href="#">Our Blog</a>
-          </li>
-          <li class="footer-top__item">
-            <a class="footer-top__link" href="#">Contact Us</a>
-          </li>
-          <li class="footer-top__item">
-            <a class="footer-top__link" href="#">Terms & Condition</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-top__items footer-top__account">
-        <h5 class="footer-top__items-title">Account</h5>
-        <ul class="footer-top__list">
-          <li class="footer-top__item">
-            <a class="footer-top__link" href="#">Your Account</a>
-          </li>
-          <li class="footer-top__item">
-            <a class="footer-top__link" href="#">Checkout</a>
-          </li>
-          <li class="footer-top__item">
-            <a class="footer-top__link" href="#">Login</a>
-          </li>
-          <li class="footer-top__item">
-            <a class="footer-top__link" href="#">Register</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-top__items footer-top__newsletter">
-        <h5 class="footer-top__items-title">Newsletter</h5>
-        <p class="footer-top__items-text">
-          Subscribe by our newsletter and get update protidin.
-        </p>
-        <form class="footer-top__form" action="#">
-          <input class="footer-top__form-input" type="text" placeholder="Email address" required>
-          <button class="footer-top__form-btn" type="submit">Subscribe</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p class="footer-bottom__copy">©2024 Glee. All rights reserved.</p>
-      <ul class="footer-bottom__nav-list">
-        <li class="footer-bottom__nav-item">
-          <a class="footer-bottom__nav-link" href="#">Home</a>
-        </li>
-        <li class="footer-bottom__nav-item">
-          <a class="footer-bottom__nav-link" href="#">About</a>
-        </li>
-        <li class="footer-bottom__nav-item">
-          <a class="footer-bottom__nav-link" href="#">Blog</a>
-        </li>
-        <li class="footer-bottom__nav-item">
-          <a class="footer-bottom__nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
+  {% include 'app/module/_footer/_footer.html' %}
 
   <script src="js/main.min.js"></script>
   

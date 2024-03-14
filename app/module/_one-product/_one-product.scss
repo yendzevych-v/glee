@@ -1,0 +1,71 @@
+.one-product {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $link-color;
+    width: 50%;
+    padding: 0 20px 75px;
+  }
+
+  &__img {
+    margin-top: -100px;
+  }
+
+  &__content {
+    padding-top: 75px;
+    margin-left: 30px;
+    max-width: 380px;
+  }
+
+  &__title {
+    font-size: 26px;
+    line-height: 32px;
+    @extend %dmsans-700;
+    color: $default-color;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @extend %rubik-400;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    width: 180px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $accent-color;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 12px;
+    color: $accent-color;
+    @extend %rubik-500;
+    transition: all .3s;
+
+    svg {
+      line-height: 1;
+
+      path {
+        fill: $accent-color;
+      }
+    }
+
+    &:hover {
+      background-color: $accent-color;
+      color: $ligth-color;
+
+      path {
+        fill: $ligth-color;
+      }
+    }
+  }
+}

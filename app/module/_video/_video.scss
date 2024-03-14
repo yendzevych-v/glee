@@ -1,0 +1,28 @@
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/video-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/video-link-bg.png);
+    background-position: center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 127px;
+    height: 127px;
+    border-radius: 50%;
+
+    path {
+      fill: $ligth-color;
+    }
+  }
+}

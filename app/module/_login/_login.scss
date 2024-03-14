@@ -1,0 +1,91 @@
+.login {
+  padding-top: 115px;
+  max-width: 500px;
+  margin: 0 auto 120px;
+
+  &__form,
+  &__new {
+    @extend %rubik-400;
+    color: $accent-color;
+    font-size: 14px;
+    line-height: 18px;
+
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    border-radius: 0;
+    height: 60px;
+    padding: 5px;
+  }
+
+  &__btn-form,
+  &__btn {
+    padding: 19px 10px;
+    width: 100%;
+    transition: all .3s;
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &__btn-form {
+    margin: 10px 0 30px;
+    background-color: $button-color;
+    color: $ligth-color;
+    border: none;
+
+    &:hover {
+      background-color: $default-color;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 0;
+    background-color: $ligth-color;
+    border: 2px solid #a3bbc8;
+    color: $default-color;
+
+    &:hover {
+      background-color: $default-color;
+      border-color: $default-color;
+      color: $ligth-color;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .login__label {
+      margin-bottom: 0;
+    }
+  }
+
+  &__error {
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__new {
+    border-top: 2px solid #f6f6f6;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+}

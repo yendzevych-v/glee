@@ -59,6 +59,11 @@ body {
     color: inherit;
   }
 }
+.title {
+  @extend %title;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 .pagination {
   display: flex;

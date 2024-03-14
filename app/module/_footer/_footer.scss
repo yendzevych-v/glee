@@ -1,0 +1,160 @@
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  padding: 80px 0 70px;
+  border-bottom: 1px solid rgba($button-color, .4);
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__contact {
+    width: 200px;
+    margin-right: 70px;
+  }
+
+  &__services,
+  &__account,
+  &__newsletter {
+    width: 270px;
+    display: block;
+  }
+
+  &__items+.footer-top__items {
+    margin-left: 30px;
+  }
+
+  &__address,
+  &__email,
+  &__phone {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    @extend %rubik-400;
+    color: $text-color;
+    margin-bottom: 20px;
+
+    a {
+      color: $text-color;
+      transition: all .3s;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+
+  &__items-title {
+    font-size: 16px;
+    @extend %dmsans-700;
+    line-height: 21px;
+    color: $footer-title;
+    margin-bottom: 25px;
+    margin-top: 20px;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    @extend %rubik-400;
+    color: $text-color;
+    margin-bottom: 20px;
+    transition: all .3s;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+  &__items-text {
+    font-size: 14px;
+    line-height: 24px;
+    @extend %rubik-400;
+    color: $text-color;
+    margin-bottom: 35px;
+  }
+
+  &__form {
+    width: 100%;
+    position: relative;
+  }
+
+  &__form-input {
+    background-color: rgba($link-color, .2);
+    font-size: 12px;
+    line-height: 18px;
+    height: 38px;
+    border: none;
+    padding: 10px 100px 10px 15px;
+    max-width: 270px;
+    width: 100%;
+    @extend %dmsans-400;
+    outline: none;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+  }
+
+  &__form-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #a3bbc8;
+    color: $ligth-color;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    @extend %dmsans-400;
+    transition: all .3s;
+
+    &:hover {
+      background-color: $default-color;
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+
+  &__copy,
+  &__nav-link {
+    font-size: 14px;
+    line-height: 32px;
+    @extend %rubik-400;
+    color: $text-color;
+  }
+
+
+  &__nav-list {
+    display: flex
+  }
+
+  &__nav-item+.footer-bottom__nav-item {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 15px;
+      background-color: $text-color;
+      left: 15px;
+      top: 8px;
+    }
+  }
+
+  &__nav-link {
+    transition: all .3s;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+}
