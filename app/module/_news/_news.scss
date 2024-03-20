@@ -120,3 +120,51 @@
     }
   }
 }
+@media (max-width: 992px) {
+
+  .blog {
+    &__item-title {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+    &__item-content {
+      padding: 20px 15px 15px;
+    }
+    &__item-imglink::after {
+      left: 15px;
+    }
+    &__item-metedate {
+      padding-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 779px) {
+  .blog {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &::after {
+      height: 126px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .blog {
+    &__inner {
+      flex-direction: column;
+    }
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item-imglink {
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+  }
+}

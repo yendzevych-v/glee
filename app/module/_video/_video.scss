@@ -15,7 +15,7 @@
     align-items: center;
     background-image: url(../images/video-link-bg.png);
     background-position: center center;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 127px;
     height: 127px;
@@ -23,6 +23,16 @@
 
     path {
       fill: $ligth-color;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .video {
+    height: 400px;
+    &__link {
+      width: 110px;
+      height: 110px;
     }
   }
 }

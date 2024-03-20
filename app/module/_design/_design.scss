@@ -13,7 +13,7 @@
 
   &__item {
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     border-radius: 5px;
     padding: 35px 0 0 35px;
@@ -38,5 +38,34 @@
   &__item-subtitle {
     @extend %dmsans-700;
     color: $button-color;
+  }
+}
+
+@media (max-width: 1200px) {
+  .design {
+    padding: 80px 0 100px;
+    &__list {
+      justify-content: space-around;
+    }
+    &__item {
+      max-width: 48%;
+    }
+  }
+}
+
+@media (max-width: 779px) {
+  .design {
+    padding: 60px 0 80px;
+    &__filter {
+      margin-bottom: 40px;
+    }
+    &__list {
+      justify-content: flex-start;
+      gap: 20px;
+    }
+    &__item {
+      max-width: 100%;
+      padding: 15px 0 0 15px;
+    }
   }
 }

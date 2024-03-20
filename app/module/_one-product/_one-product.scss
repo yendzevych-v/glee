@@ -69,3 +69,41 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .one-product {
+    &__items {
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 100%;
+      padding: 0 20px 40px;
+      &:nth-child(1) {
+        margin-bottom: 70px;
+      }
+    }
+    &__img {
+      margin-top: -50px;
+    }
+  }
+}
+@media (max-width: 530px) {
+  .one-product {
+
+    &__item {
+      padding: 0 20px 20px;
+
+      &:nth-child(1) {
+        margin-bottom: 20px;
+      }
+    }
+    &__img {
+      display: none;
+    }
+    &__content {
+      padding-top: 20px;
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+}

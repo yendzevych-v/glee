@@ -12,4 +12,36 @@
   &__item {
     object-fit: contain;
   }
+  &__item + .partner__item {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .partner {
+    padding: 60px 0 60px;
+    &__items {
+      flex-wrap: wrap;
+    }
+  }
+}
+@media (max-width: 840px) {
+  .partner {
+    &__item {
+      max-width: 100px;
+    }
+  }
+}
+@media (max-width: 779px) {
+  .partner {
+    &__items {
+      flex-direction: column;
+    }
+    &__item {
+      max-width: 100%;
+    }
+    &__item + .partner__item {
+      margin-left: 0px;
+      margin-top: 30px;
+    }
+  }
 }
